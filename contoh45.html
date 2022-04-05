@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> mengubah nilai object property</title>
+</head>
+<body>
+    <script>
+    var siswa = { nama: "Fadli", 
+    jurusan : "rekayasa perangkat lunak" ,
+    nilai : 3.45 ,
+    semester: 4 };
+ 
+   console.log( siswa.nama);
+   siswa.nama = "ahmad";
+   console.log( siswa.nama);
+
+   console.log( siswa["nilai"]);
+   siswa.nilai = "2,9";
+   console.log( siswa["nilai"]);
+    </script>
+</body>
+</html>
