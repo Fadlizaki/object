@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pengajian karyawan</title>
+</head>
+<body>
+    <select name="" id="pilih" class="form-select" aria-label="Default select example">
+        <option value="satu" id="satu">golongan 1</option>
+        <option value="dua" id="dua">golongan 2</option>
+        <option value="tiga" id="tiga">golongan 3</option>
+    </select><br>
+    <select name="" id="pilihs" class="form-select" aria-label="Default select example">
+        <option value="nikah" id="nikah">nikah</option>
+        <option value="tidak" id="tidak">single</option>
+    </select><br>
+      <button type="button" class="btn btn-info col-sm-12" onclick="submit()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Cek
+      </button>
+      <p id="total"></p>
+    <script>
+         function submit(){
+      var satu = document.getElementById("satu").value;
+      var dua = document.getElementById("dua").value;
+      var tiga = document.getElementById("tiga").value;
+      var pilih = document.getElementById("pilih").value;
+      var pilihs = document.getElementById("pilihs").value;
+      var nikah = document.getElementById("nikah").value;
+      var tidak = document.getElementById("tidak").value;
+
+
+    class gajian {
+     constructor(satu, dua, tiga,nikah,tidak) {
+        this.satu = satu;
+        this.dua = dua;
+        this.tiga = tiga;
+        this.nikah = nikah;
+        this.tidak = tidak;
+ }
+ }
+ var gaji = new gajian(500000,750000,900000,500000,0);
+
+ if (pilih == "satu"){
+      gaji.satu;
+      var diskon = (10/100)*gaji.satu;
+      var jumlah = gaji.satu - diskon ;
+      document.getElementById("total").innerHTML= jumlah; 
+        if(pilihs == "nikah"){
+        gaji.satu;
+        var jumlah = gaji.satu + gaji.nikah;
+        var diskon = (10/100)*jumlah;
+        var semua = jumlah - diskon;
+        document.getElementById("total").innerHTML= semua;
+        }
+    }
+       else if (pilih == "dua"){
+      gaji.dua;
+      var diskon = (10/100)*gaji.dua;
+      var jumlah = gaji.dua - diskon ;
+      document.getElementById("total").innerHTML= jumlah; 
+        if(pilihs == "nikah"){
+        gaji.dua;
+        var jumlah = gaji.dua + gaji.nikah;
+        var diskon = (10/100) * jumlah;
+        var semua = jumlah - diskon;
+        document.getElementById("total").innerHTML= semua;
+
+        }
+
+    }
+
+    else if (pilih == "tiga"){
+      gaji.tiga;
+      var diskon = (10/100)*gaji.tiga;
+      var jumlah = gaji.tiga - diskon ;
+      document.getElementById("total").innerHTML= jumlah; 
+        if(pilihs == "nikah"){
+        gaji.tiga;
+        var jumlah = gaji.tiga + gaji.nikah;
+        var diskon = (10/100) * jumlah;
+        var semua = jumlah - diskon;
+        document.getElementById("total").innerHTML= semua;
+
+        }
+
+    }
+
+
+  }
+      </script>
+     
+</body>
+</html>
